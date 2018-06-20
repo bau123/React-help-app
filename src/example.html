@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://localhost:3000/home -->
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#000000">
+	<!--
+         manifest.json provides metadata used when your web app is added to the
+         homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+         -->
+	<link rel="manifest" href="http://localhost:3000/manifest.json">
+	<link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+	<!--
+         Notice the use of  in the tags above.
+         It will be replaced with the URL of the `public` folder during the build.
+         Only files inside the `public` folder can be referenced from the HTML.
+         
+         Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+         work correctly both with client-side routing and a non-root public URL.
+         Learn how to configure a non-root public URL by running `npm run build`.
+         -->
+	<title>React App</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="fontStyle.css">
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+
+</head>
+
+<body>
+	<noscript>
+		You need to enable JavaScript to run this app.
+	</noscript>
+	<div id="root">
+		<div class="App">
+			<a href="http://localhost:3000/home#maincontent" class="skip">1</a>
+			<div>
+				<div class="HeaderHolder">
+					<div class="MainHeader">
+						<div class="MobileS">☰</div>
+						<div class="HeaderLogo">
+							<a href="http://localhost:3000/home" id="top">Person Enquiry</a>
+						</div>
+					</div>
+					<nav class="MainMenu">
+						<ul>
+							<li>
+								<a href="http://localhost:3000/home">Home</a>
+							</li>
+							<li>
+								<a href="http://localhost:3000/enquiry">Enquiry</a>
+							</li>
+							<li>
+								<a href="http://localhost:3000/ids">Person</a>
+							</li>
+							<li>
+								<a href="http://localhost:3000/veh">Vehicle</a>
+							</li>
+							<li>
+								<a href="http://localhost:3000/veh">Driver</a>
+							</li>
+							<li>
+								<a href="http://localhost:3000/demo">Property</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="HomeMain">
+					<div class="Quick">
+						<form>
+							<div class="QuickEnquiry">
+								<div class="QuickReason">
+
+									<div class="form-group" id="reasonDiv">
+										<label class="form-label" for="Reason">Reason</label>
+										<select class="form-control" id="reason">
+                                    <option value="05">05IN:   Subject of process or investigation</option>
+                                    <option value="00">00AC:   Transaction log and other audit checks</option>
+                                    <option value="01">01SC:   Vehicle and/or person stopped, i.e. a street check</option>
+                                    <option value="02">02MV:   Moving vehicle</option>
+                                    <option value="03">03AV:   Abandoned or parked and unattended vehicle</option>
+                                    <option value="04">04VC: Vehicles involved in a road traffic collision</option>
+                                    <option value="06">Administration</option>
+                                    <option value="07">Enquiries relating to family protection issues</option>
+                                    <option value="08">On behalf of other authorised agency</option>
+                                    <option value="09">Update/Confirm/Broadcast</option>
+                                 </select>
+									</div>
+
+									<div class="form-group" id="justificationDiv">
+										<label class="form-label" for="justification">Supporting Notes</label>
+										<input class="form-control" type="text" id="justification" value="">
+									</div>
+								</div>
+								<!-- end quickReason -->
+
+								<div class="QuickSearchTerms">
+									<div class="form-group" id="searchTermsDiv">
+										<label class="form-label" for="Search Terms"> Search Terms </label>
+										<input class="form-control" id="search" type="text" value="">
+									</div>
+								</div>
+
+								<div class="search"><input class="search" type="submit" value="Search"></div>
+								<div class="search-mobile"><input class="button" type="submit" value="Search"></div>
+
+							</div>
+						</form>
+					</div>
+
+					<div class="DetailedSearch">
+						<a href="http://localhost:3000/enquiry">Use More Criteria</a>
+					</div>
+					<div class="Audit">
+
+						<div id="newSection">
+
+
+						</div>
+
+						<h3>Latest searches </h3>
+						<br>
+						<table class="dataTab" style="width: 100%;">
+							<thead>
+								<tr>
+									<th>Date</th>
+									<th>Supporting Notes</th>
+									<th>Criteria</th>
+									<th>Action</th>
+									<th>Re Query</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>31-May-2018 13:31:10</td>
+									<td>05 : a</td>
+									<td>a</td>
+									<td>
+										<a tabindex="54" href="http://localhost:3000/view">View</a>
+									</td>
+									<td>
+										<a href="http://localhost:3000/enquiry">Re-Query</a>
+									</td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:14:52</td>
+									<td>05 : a</td>
+									<td>aaa</td>
+									<td>
+										<a tabindex="46" href="http://localhost:3000/view">View</a>
+									</td>
+									<td>
+										<a href="http://localhost:3000/enquiry">Re-Query</a>
+									</td>
+								</tr>
+								<tr>
+									<td>31-May-2018 12:13:49</td>
+									<td>05 : a</td>
+									<td>a</td>
+									<td>
+										<a tabindex="2" href="http://localhost:3000/view">View</a>
+									</td>
+									<td>
+										<a href="http://localhost:3000/enquiry">Re-Query</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<h3>All Records</h3>
+						<br>
+						<table class="dataTab" style="width: 100%;">
+							<thead>
+								<tr>
+									<th>Date</th>
+									<th>Type</th>
+									<th>Justificiation</th>
+									<th>Title</th>
+									<th>Action</th>
+									<th>Re Query</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>31-May-2018 13:31:24</td>
+									<td>Addresses</td>
+									<td>05:a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="65" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:31:23</td>
+									<td>Addresses</td>
+									<td>05:a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="64" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:31:23</td>
+									<td>PERSON_SUMMARY</td>
+									<td>05:a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="63" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:31:22</td>
+									<td>SINGLE_PERSON</td>
+									<td>05:a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="62" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:31:20</td>
+									<td>Markers</td>
+									<td>a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="61" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:31:19</td>
+									<td>Markers</td>
+									<td>a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="60" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:31:17</td>
+									<td>Markers</td>
+									<td>a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="59" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:31:16</td>
+									<td>Markers</td>
+									<td>a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="58" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:31:16</td>
+									<td>Markers</td>
+									<td>a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="57" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:31:14</td>
+									<td>MENU</td>
+									<td>05:a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="56" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:31:14</td>
+									<td>PERSON_SUMMARY</td>
+									<td>05:a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="55" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:31:10</td>
+									<td>SEARCH</td>
+									<td>05 : a</td>
+									<td>a</td>
+									<td>
+										<a tabindex="54" href="http://localhost:3000/view">View</a>
+									</td>
+									<td>
+										<a href="http://localhost:3000/enquiry">Re-Query</a>
+									</td>
+								</tr>
+								<tr>
+									<td>31-May-2018 13:14:52</td>
+									<td>SEARCH</td>
+									<td>05 : a</td>
+									<td>aaa</td>
+									<td>
+										<a tabindex="46" href="http://localhost:3000/view">View</a>
+									</td>
+									<td>
+										<a href="http://localhost:3000/enquiry">Re-Query</a>
+									</td>
+								</tr>
+								<tr>
+									<td>31-May-2018 12:14:02</td>
+									<td>PERSON_SUMMARY</td>
+									<td>05:a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="15" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>31-May-2018 12:14:01</td>
+									<td>SINGLE_PERSON</td>
+									<td>05:a</td>
+									<td>1</td>
+									<td>
+										<a tabindex="14" href="http://localhost:3000/view">View</a>
+									</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="feedbackPrompt footer-content">
+				<span>
+                     Is this page useful?
+                     <a class="feedbackLinks" href="http://localhost:3000/home#top"> Yes</a>
+		     &nbsp;&nbsp;
+                     <a class="feedbackLinks" href="http://localhost:3000/home#top"> No </a>
+                 </span>
+				<a class="problemLink" href="https://www.gov.uk/contact/govuk">Is there anything wrong with this page? </a>
+			</div>
+
+
+
+
+			<footer class="footerBorder">
+				<div class="footer">
+					<a href="http://localhost:3000/home#top" class="back-to-top">.</a>
+					<div class="footer-content">
+						<div class="grid-row">
+							<div class="column-two-thirds">
+								<h2 class="footerHeaders">Services and information </h2>
+								<div class="footerLists">
+									<ul class="list">
+										<li class="footerListItems">
+											<a class="footerLinks" href="http://localhost:3000/home#top">Contact the Police</a>
+										</li>
+										<li class="footerListItems">
+											<a class="footerLinks" href="http://localhost:3000/home#top">Your neighbourhood</a>
+										</li>
+										<li class="footerListItems">
+											<a class="footerLinks" href="http://localhost:3000/home#top">Crime map</a>
+										</li>
+									</ul>
+								</div>
+								<div class="footerLists">
+									<ul class="list">
+										<li class="footerListItems">
+											<a class="footerLinks" href="http://localhost:3000/home#top">Performance</a>
+										</li>
+										<li class="footerListItems">
+											<a class="footerLinks" href="http://localhost:3000/home#top">Information &amp; advice</a>
+										</li>
+										<li class="footerListItems">
+											<a class="footerLinks" href="http://localhost:3000/home#top">Environment and countryside</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="column-one-third">
+								<h2 class="footerHeaders">Departments and policy </h2>
+								<div class="footerLists">
+									<ul class="list">
+										<li class="footerListItems">
+											<a class="footerLinks" href="http://localhost:3000/home#top">Drugs squad</a>
+										</li>
+										<li class="footerListItems">
+											<a class="footerLinks" href="http://localhost:3000/home#top">Economic Crime Unit/Detective</a>
+										</li>
+										<li class="footerListItems">
+											<a class="footerLinks" href="http://localhost:3000/home#top">Specialist Operations</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<!--
+         This HTML file is a template.
+         If you open it directly in the browser, you will see an empty page.
+         
+         You can add webfonts, meta tags, or analytics to this file.
+         The build step will place the bundled scripts into the <body> tag.
+         
+         To begin the development, run `npm start` or `yarn start`.
+         To create a production bundle, use `npm run build` or `yarn build`.
+         -->
+	<script type="text/javascript">
+		function getHelp(sectionKey) {
+      console.log("help function");
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          console.log("load help place holder");
+        } else {
+          console.log("failed to receive data, dummy data here");
+        }
+      };
+      xhttp.open("GET", "ajax_info.txt", true);
+      xhttp.send();
+
+    }
+
+    var tableData = {
+      section: "crimes",
+      data: [{
+          name: "chandler bing",
+          crime: "murder"
+        },
+        {
+          name: "Ross Gueller",
+          crime: "Theft"
+        },
+        {
+          name: "Joey Tribiani",
+          crime: "Harrasment"
+        }
+      ]
+    };
+
+    var htmlData = '\
+                    <a href="#" onclick="getHelp(tableData.section)">Help...</a>\
+                    <table>\
+                      <thead> <tr>\
+                         <th> Name </th>\
+                         <th> Crime </th>\
+                      </tr> </thead>\
+                      <tbody>';
+
+    var data = tableData.data;
+    var tableReact = React.createClass({
+	render() {
+	return 
+	}
+};
+
+    for (var x = 0; x < data.length; x++) {
+      htmlData += '\
+                        <tr>\
+                          <td>' + data[x].name + '</td>\
+                          <td>' + data[x].crime + '</td>\
+                        </tr>';
+    }
+
+    htmlData += '\
+                      </tbody>\
+                    </table>';
+    var tableElement = document.getElementById("newSection");
+    tableElement.innerHTML = tableElement.innerHTML + htmlData;
+	</script>
+
+	<script type="text/javascript" src="./React App_files/bundle.js.download"></script>
+</body>
+
+</html>
