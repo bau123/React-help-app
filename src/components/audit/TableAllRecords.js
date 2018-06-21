@@ -2,7 +2,7 @@ import React, { Component } from "react";
 class TableAllRecords extends Component {
   render() {
     return (
-      <table class="dataTab" styles="width: 100%;">
+      <table className="dataTab" styles="width: 100%;">
         <thead>
           <tr>
             <th>Date</th>
