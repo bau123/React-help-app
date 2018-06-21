@@ -45,7 +45,7 @@ class GetHelp extends Component {
             //, this.showHelp()
           }
         >
-          Get Help
+          + help
         </a>
         <br />
         <span className="helpOn" ref={this.myRef}>
