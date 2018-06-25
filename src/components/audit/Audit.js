@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TableLatestSearch from "./TableLatestSearch";
 import TableAllRecords from "./TableAllRecords";
+import GetHelp from "../GetHelp";
 
 class Audit extends Component {
   render() {
@@ -9,6 +10,7 @@ class Audit extends Component {
         <div id="newSection" />
         <h3> Latest searches </h3>
         <br />
+        <div className="Help" />
         <div className="TableLatestSearch">
           <TableLatestSearch />
         </div>

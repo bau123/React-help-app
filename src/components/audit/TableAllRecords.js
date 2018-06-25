@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import GetHelp from "../GetHelp";
 class TableAllRecords extends Component {
   render() {
     return (
@@ -15,7 +16,12 @@ class TableAllRecords extends Component {
         </thead>
         <tbody>
           <tr>
-            <td>31-May-2018 13:31:24</td>
+            <td>
+              31-May-2018 13:31:24
+              <div className="AuditHelp">
+                <GetHelp />
+              </div>
+            </td>
             <td>Addresses</td>
             <td>05:a</td>
             <td>1</td>

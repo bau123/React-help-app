@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class GetHelp extends Component {
   constructor() {
     super();
-    this.myRef = React.createRef();
   }
   getHelp(helpID) {
     console.log("the helpID is: " + helpID);
@@ -19,39 +18,43 @@ class GetHelp extends Component {
       };
       xhttp.open("GET", "ajax_info.txt", true);
       xhttp.send();
-      //this.props.compo("API help DATA here");
+      //pass in help from api into apiData
       this.setState({
-        apiData: "Help me help me help me"
+        apiData: "This is the detailed search bar!!!"
       });
     }
+    console.log("apiData is: " + this.state.apiData);
   }
   componentWillMount() {
     this.state = {
-      apiData: ""
+      apiData: "",
+      showhelp: false
     };
+    //this.myRef = React.createRef();
   }
 
   showHelp() {
-    //if(ReactDOM.findDOMNode(this.refs.myRef))
+    this.setState({
+      showhelp: !this.state.showhelp
+    });
   }
 
+  helper() {
+    this.showHelp();
+    this.getHelp(this.props.helpID);
+  }
   render() {
     return (
       <div className="Help">
-        <a
-          href="#"
-          onClick={
-            () => this.getHelp(this.props.helpID)
-            //, this.showHelp()
-          }
-        >
+        <a href="#" onClick={() => this.helper()}>
           + help
         </a>
         <br />
-        <span className="helpOn" ref={this.myRef}>
-          {" "}
-          {this.state.apiData}{" "}
-        </span>
+        {this.state.showhelp ? (
+          <div className="HelpHolder">
+            <span> {this.state.apiData} </span>
+          </div>
+        ) : null}
       </div>
     );
   }

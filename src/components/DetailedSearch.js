@@ -15,6 +15,5 @@ class DetailedSearch extends Component {
       </div>
     );
   }
-  displayHelp() {}
 }
 export default DetailedSearch;
