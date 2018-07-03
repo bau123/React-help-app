@@ -5,9 +5,16 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "axios": "0.18.0",
+    "emotion": "9.2.4",
+    "govuk-react": "0.2.7",
+    "jquery": "3.3.1",
     "react": "16.3.2",
     "react-dom": "16.3.2",
-    "react-scripts": "1.1.4"
+    "react-emotion": "9.2.4",
+    "react-responsive-modal": "3.0.3",
+    "react-scripts": "1.1.4",
+    "react-tabs": "2.2.2"
   },
   "devDependencies": {},
   "scripts": {

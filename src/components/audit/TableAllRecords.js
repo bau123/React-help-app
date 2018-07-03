@@ -18,7 +18,7 @@ class TableAllRecords extends Component {
           <tr>
             <td>
               31-May-2018 13:31:24
-              <div className="AuditHelp">
+              <div className="ID002">
                 <GetHelp />
               </div>
             </td>

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import TableLatestSearch from "./TableLatestSearch";
 import TableAllRecords from "./TableAllRecords";
-import GetHelp from "../GetHelp";
 
 class Audit extends Component {
   render() {

@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import GetHelp from "../GetHelp";
+import Help from "../help/HelpBulletPoints";
+import HelpTable from "../help/HelpTable";
 
 class TableLatestSearch extends Component {
   render() {
@@ -6,11 +9,36 @@ class TableLatestSearch extends Component {
       <table className="dataTab" styles="width: 100%;">
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Supporting Notes</th>
-            <th>Criteria</th>
-            <th>Action</th>
-            <th>Re Query</th>
+            <th>
+              Date
+              <div className="Date">
+                <Help id="ID002" />
+              </div>
+            </th>
+            <th>
+              Supporting Notes
+              <div className="Support">
+                <Help id="ID001" />
+              </div>
+            </th>
+            <th>
+              Criteria
+              <div className="Criteria">
+                <Help id="ID002" />
+              </div>
+            </th>
+            <th>
+              Action
+              <div className="Action">
+                <Help id="ID001" />
+              </div>
+            </th>
+            <th>
+              Re Query
+              <div className="Requery">
+                <HelpTable id="ID004" />
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>
