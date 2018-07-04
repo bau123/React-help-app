@@ -12,11 +12,11 @@ class TabTest extends Component {
     this.setState(
       {
         isDataLoad: true
-      },
-      function() {
+      });
+      
         console.log("has data loaded: " + this.state.isDataLoad);
-      }
-    );
+      
+  
   }
   getData() {
     return (

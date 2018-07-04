@@ -43,7 +43,15 @@ class HelpTable extends Component {
           ["Raul", "Paul", "", ""]
         ]
       },
-      ID005: "Help for ID005",
+      ID005: {
+        title: "Action",
+        headers: ["Major", "Minor", "Info 1", "Info 2", "Info 3", "Info 4"],
+        table: [
+          ["Todd", "Rodd", "asfdafdgzvb", ""],
+          ["Mike", "Hike", "three", "four"],
+          ["Raul", "Paul", "", ""]
+        ]
+      },
       ID006: "Help for ID006",
       ID007: "Help for ID007",
       ID008: "Help for ID008"
@@ -79,22 +87,20 @@ class HelpTable extends Component {
   help() {
     //make call to API for data here
     this.onOpenModal();
-    this.getTableRows();
   }
 
   getTableRows() {
     var data = this.state[this.props.id].table;
     var row = [];
     var person;
-    var tableRow = [];
 
     //How many table rows
     for (var i = 0; i < Object.keys(data).length; i++) {
       person = data[i];
       row.push(person.map(detail => <Table.Cell>{detail}</Table.Cell>));
     }
-    const table = row.map(r => <Table.Row>{r}</Table.Row>);
-    return table;
+    const tableRows = row.map(r => <Table.Row>{r}</Table.Row>);
+    return tableRows;
   }
 
   getTableHeaders() {
@@ -103,9 +109,9 @@ class HelpTable extends Component {
     for (var i = 0; i < data.headers.length; i++) {
       row.push(data.headers[i]);
     }
-    const rowHeader = row.map(r => <Table.CellHeader>{r}</Table.CellHeader>);
+    const tableHeaders = row.map(r => <Table.CellHeader>{r}</Table.CellHeader>);
 
-    return rowHeader;
+    return tableHeaders;
   }
   render() {
     const { open } = this.state;
