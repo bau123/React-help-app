@@ -11,7 +11,7 @@ class DetailedSearch extends Component {
       <div className="DetailedSearch">
         <a href="http://localhost:3000/enquiry">Use More Criteria</a>
         <br />
-        <GetHelp helpID="ID001" />
+        <GetHelp helpID="ID001" className="HelpMark" />
       </div>
     );
   }

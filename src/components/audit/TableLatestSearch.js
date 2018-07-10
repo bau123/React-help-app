@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import GetHelp from "../GetHelp";
 import Help from "../help/HelpBulletPoints";
 import HelpTable from "../help/HelpTable";
+import HelpEditable from "../help/HelpEditable";
 
 class TableLatestSearch extends Component {
   render() {
@@ -11,31 +12,31 @@ class TableLatestSearch extends Component {
           <tr>
             <th>
               Date
-              <div className="Date">
+              <div className="HelpMark">
                 <Help id="ID002" />
               </div>
             </th>
             <th>
               Supporting Notes
-              <div className="Support">
-                <Help id="ID001" />
+              <div className="HelpMark">
+                <HelpEditable id="ID001" />
               </div>
             </th>
             <th>
               Criteria
-              <div className="Criteria">
+              <div className="HelpMark">
                 <Help id="ID002" />
               </div>
             </th>
             <th>
               Action
-              <div className="Action">
+              <div className="HelpMark">
                 <Help id="ID001" />
               </div>
             </th>
             <th>
               Re Query
-              <div className="Requery">
+              <div className="HelpMark">
                 <HelpTable id="ID004" />
               </div>
             </th>

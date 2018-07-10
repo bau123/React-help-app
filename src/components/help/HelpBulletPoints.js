@@ -9,7 +9,6 @@ class HelpBulletPoints extends Component {
         bp: []
       },
       open: false,
-      showhelp: false,
       ID001: {
         text: ["example description of nothingness"],
         bp: [

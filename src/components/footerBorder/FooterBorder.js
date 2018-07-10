@@ -6,7 +6,7 @@ class FooterBorder extends Component {
       <div>
         <footer className="footerBorder">
           <div className="footer">
-            <a href="http://localhost:3000/home#top" class="back-to-top">
+            <a href="http://localhost:3000/home#top" className="back-to-top">
               .
             </a>
             <div className="footer-content">
