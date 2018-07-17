@@ -5,6 +5,7 @@ import Button from "@govuk-react/button";
 import Input from "@govuk-react/input";
 import TextArea from "@govuk-react/text-area";
 import RichTextEditor from "react-rte";
+import $ from "jquery";
 import ReactHtmlParser, {
   processNodes,
   convertNodeToElement,
@@ -14,10 +15,26 @@ import ReactHtmlParser, {
 class HelpEditable extends Component {
   componentWillMount() {
     this.state = {
-      value: RichTextEditor.createEmptyValue(),
+      //Change to get he text from the real db instead of localStorage
+      value: RichTextEditor.createValueFromString(
+        localStorage.getItem(this.props.id),
+        "html"
+      ),
       open: false,
+      helperID: this.helpID,
       openEditModal: false,
       editMode: false,
+      customStyles: {
+        content: {
+          top: "50%",
+          left: "50%",
+          right: "auto",
+          bottom: "auto",
+          marginRight: "-50%",
+          transform: "translate(-50%, -50%)",
+          overlfow: "scroll" // <-- This tells the modal to scrol
+        }
+      },
       display: {
         body: ""
       },
@@ -31,12 +48,6 @@ class HelpEditable extends Component {
   };
   onChange = value => {
     this.setState({ value });
-    // if (this.props.onChange) {
-    //   // Send the changes up to the parent component as an HTML string.
-    //   // This is here to demonstrate using `.toString()` but in a real app it
-    //   // would be better to avoid generating a string on each change.
-    //   this.props.onChange(value.toString("html"));
-    // }
     this.setState({
       modalEditInfo: {
         body: value.toString("html")
@@ -63,18 +74,18 @@ class HelpEditable extends Component {
   isEdit() {
     this.onCloseModal();
     this.onOpenEditModal();
-    console.log("Trying to open edit modal");
   }
 
   getEditModal() {
     const { openEditModal } = this.state;
     return (
-      <Modal open={openEditModal} onClose={this.onCloseEditModal} center>
-        <br />
-        <br />
+      <Modal
+        open={openEditModal}
+        onClose={this.onCloseEditModal}
+        style={this.state.customStyles}
+      >
         <br />
         <b> Enter help information:</b>
-        <br />
         <RichTextEditor value={this.state.value} onChange={this.onChange} />
         <Button onClick={this.saveHelp.bind(this)}> Save </Button>
       </Modal>
@@ -83,27 +94,65 @@ class HelpEditable extends Component {
 
   //Change to send data to server and make it display to the help modal once sent
   saveHelp() {
-    console.log("The state of the body: " + this.state.modalEditInfo.body);
     this.setState({
       display: {
         body: this.state.modalEditInfo.body
       }
     });
+    console.log("saveHelp");
+    this.sendData();
     this.onCloseEditModal();
     this.onOpenModal();
+  }
+
+  sendData() {
+    console.log("sendData is running");
+    let url = "http://www.deadlink.co.uk";
+    //Make this the HTML
+    let dataBody = {
+      body: this.state.modalEditInfo
+    };
+    let _this = this;
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: dataBody,
+      success: function(msg) {
+        alert("Data Saved: " + msg);
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        alert("request failed but attempting to run web data storage instead");
+        if (typeof Storage !== "undefined") {
+          localStorage.setItem(_this.props.id, _this.state.modalEditInfo.body);
+          console.log(
+            "The body of the modalEditInfo is: " +
+              _this.state.modalEditInfo.body +
+              " ID is: " +
+              _this.props.id
+          );
+        } else {
+          alert(
+            "Cannot load local storage, the browswer does not support this."
+          );
+        }
+      }
+    });
   }
 
   getModal() {}
   render() {
     const { open } = this.state;
-
     return (
       <div>
         <img className="helpIcon" src={HelpIcon} onClick={this.onOpenModal} />
-        <Modal open={open} onClose={this.onCloseModal} center>
+        <Modal
+          open={open}
+          onClose={this.onCloseModal}
+          style={this.state.customStyles}
+        >
           <br />
           <div className="HelpBody">
-            {ReactHtmlParser(this.state.display.body)}
+            {ReactHtmlParser(localStorage.getItem(this.props.id))}
           </div>
           <Button onClick={this.isEdit.bind(this)}>Edit</Button>
         </Modal>

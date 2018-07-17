@@ -1,12 +1,12 @@
 .helpIcon {
-  width: 10px;
+  width: 12px;
   padding: 3px;
   background-color: white;
   border-radius: 5px;
-  height: 10px;
 }
 .HelpMark {
   visibility: hidden;
+  cursor: pointer;
 }
 
 .FormatButtons {
@@ -16,4 +16,8 @@
   background-color: #e7e7e7;
   color: black;
   text-align: center;
+}
+
+.HelpActivator {
+  cursor: pointer;
 }

@@ -48,11 +48,10 @@ class App extends Component {
           <Header />
         </div>
         <div className="HomeMain">
-          <img
-            className="HelpActivator"
-            src={HelpActivator}
-            onClick={this.showHelp.bind(this)}
-          />
+          <a className="HelpActivator" onClick={this.showHelp.bind(this)}>
+            {" "}
+            Click to turn on help{" "}
+          </a>
           <div className="Quick">
             <Quick />
           </div>

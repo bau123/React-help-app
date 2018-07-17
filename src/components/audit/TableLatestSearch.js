@@ -19,13 +19,13 @@ class TableLatestSearch extends Component {
             <th>
               Supporting Notes
               <div className="HelpMark">
-                <HelpEditable id="ID001" />
+                <HelpEditable id="001" />
               </div>
             </th>
             <th>
               Criteria
               <div className="HelpMark">
-                <Help id="ID002" />
+                <HelpEditable id="002" />
               </div>
             </th>
             <th>

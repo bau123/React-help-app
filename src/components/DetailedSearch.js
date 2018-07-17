@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import GetHelp from "./GetHelp";
+import HelpEdit from "./help/HelpEditable";
 
 class DetailedSearch extends Component {
   constructor() {
@@ -11,7 +11,9 @@ class DetailedSearch extends Component {
       <div className="DetailedSearch">
         <a href="http://localhost:3000/enquiry">Use More Criteria</a>
         <br />
-        <GetHelp helpID="ID001" className="HelpMark" />
+        <div className="HelpMark">
+          <HelpEdit helpID="ID001" />
+        </div>
       </div>
     );
   }

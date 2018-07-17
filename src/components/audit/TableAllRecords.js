@@ -1,27 +1,52 @@
 import React, { Component } from "react";
-import GetHelp from "../GetHelp";
+import HelpEdit from "../help/HelpEditable";
 class TableAllRecords extends Component {
   render() {
     return (
       <table className="dataTab" styles="width: 100%;">
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Type</th>
-            <th>Justificiation</th>
-            <th>Title</th>
-            <th>Action</th>
-            <th>Re Query</th>
+            <th>
+              Date
+              <div className="HelpMark">
+                <HelpEdit />
+              </div>
+            </th>
+            <th>
+              Type
+              <div className="HelpMark">
+                <HelpEdit />
+              </div>
+            </th>
+            <th>
+              Justificiation
+              <div className="HelpMark">
+                <HelpEdit />
+              </div>
+            </th>
+            <th>
+              Title
+              <div className="HelpMark">
+                <HelpEdit />
+              </div>
+            </th>
+            <th>
+              Action
+              <div className="HelpMark">
+                <HelpEdit />
+              </div>
+            </th>
+            <th>
+              Re Query
+              <div className="HelpMark">
+                <HelpEdit />
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>
-              31-May-2018 13:31:24
-              <div className="ID002">
-                <GetHelp />
-              </div>
-            </td>
+            <td>31-May-2018 13:31:24</td>
             <td>Addresses</td>
             <td>05:a</td>
             <td>1</td>
